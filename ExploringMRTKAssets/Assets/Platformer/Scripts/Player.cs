@@ -7,7 +7,6 @@ public class Player : MonoBehaviour {
   // Use it when not exposing to other classes
   [SerializeField] private Transform _groundCheckTransform;
   [SerializeField] private LayerMask _playerMask;
-
   private bool _jumpKeyWasPressed;
   private float _horizontalInput;
   private Rigidbody _rigidBodyComponent;
