@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BrickBreaker.unity
+    guid: 85189e92939bae54ca093c297a64f5c8
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 04739dabe1b31df418e4225a15aaa1aa, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 674687b36b21d644db0a1c9042a78735, type: 2}

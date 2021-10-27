@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
   public GameObject GamePlayUi;
   public GameObject LevelCompleteDisplay;
   public GameObject GameOverDisplay;
+  public GameObject HighScoreDisplay;
   public GameObject StartButton;
 
   public GameObject[] Levels;
@@ -17,12 +18,14 @@ public class GameManager : MonoBehaviour {
   public Text ScoreText;
   public Text BallsText;
   public Text LevelText;
+  private Text _highScoreText;
 
   public static GameManager Instance { get; private set; }
 
   private Transform _contentParent;
   private GameObject _currentBall;
   private GameObject _currentLevel;
+  private GameObject _player;
 
   private int _score;
   public int Score {
@@ -65,6 +68,7 @@ public class GameManager : MonoBehaviour {
 
   private void Start() {
     _contentParent = GameContent.transform;
+    _highScoreText = HighScoreDisplay.transform.GetComponentInChildren<Text>();
     Instance = this;
     SwitchState(State.Menu);
   }
@@ -86,32 +90,50 @@ public class GameManager : MonoBehaviour {
     switch (newState) {
       case State.Menu:
         StartButton.SetActive(true);
+        _highScoreText.text = $"CURRENT HIGH SCORE: {PlayerPrefs.GetInt("highscore")}";
+        HighScoreDisplay.SetActive(true);
         break;
       case State.Init:
+        HighScoreDisplay.SetActive(false);
         GamePlayUi.SetActive(true);
         Score = 0;
         Level = 0;
         Balls = 3;
-        var player = Instantiate(PlayerPrefab);
-        player.transform.SetParent(_contentParent, false);
+        if(_currentLevel is { }) {
+          Destroy(_currentLevel);
+        }
+        _player = Instantiate(PlayerPrefab);
+        _player.transform.SetParent(_contentParent, false);
         SwitchState(State.LoadLevel);
         break;
       case State.Play:
         break;
       case State.LevelCompleted:
         LevelCompleteDisplay.SetActive(true);
+        Destroy(_currentLevel);
+        Destroy(_currentBall);
+        SwitchState(State.LoadLevel, 2.0f);
         break;
       case State.LoadLevel:
         if(Level >= Levels.Length) {
           SwitchState(State.GameOver);
         } else {
-          _currentLevel = Instantiate(Levels[Level]);
+          _currentLevel = Instantiate(Levels[Level++]);
           _currentLevel.transform.SetParent(_contentParent, false);
           SwitchState(State.Play);
         }
         break;
       case State.GameOver:
+        if (Score > PlayerPrefs.GetInt("highscore")) {
+          PlayerPrefs.SetInt("highscore", Score);
+          _highScoreText.text = $"NEW HIGH SCORE! {PlayerPrefs.GetInt("highscore")}";
+          HighScoreDisplay.SetActive(true);
+        }
         GameOverDisplay.SetActive(true);
+        Destroy(_player);
+        if (Input.anyKeyDown) {
+          SwitchState(State.Menu);
+        }
         break;
     }
   }
@@ -126,10 +148,15 @@ public class GameManager : MonoBehaviour {
         if(_currentBall == null) {
           if(Balls > 0) {
             _currentBall = Instantiate(BallPrefab);
+            _currentBall.GetComponent<Ball>().Player = _player;
             _currentBall.transform.SetParent(_contentParent, false);
+            _currentBall.transform.SetPositionAndRotation(new Vector3(_player.transform.position.x, _player.transform.position.y + .25f, _currentBall.transform.position.z), _currentBall.transform.rotation);
           } else {
             SwitchState(State.GameOver);
           }
+        }
+        if(_currentLevel is { } && _currentLevel.transform.childCount == 0 && !_isSwitchingState) {
+          SwitchState(State.LevelCompleted);
         }
         break;
       case State.LevelCompleted:
