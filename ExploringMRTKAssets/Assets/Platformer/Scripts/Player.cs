@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
   // SerializeField attribute exposes the variable in the inspector
   // Use it when not exposing to other classes
-  [SerializeField] private Transform _groundCheckTransform;
-  [SerializeField] private LayerMask _playerMask;
+  public Transform _groundCheckTransform;
+  public LayerMask _playerMask;
   private bool _jumpKeyWasPressed;
   private float _horizontalInput;
   private Rigidbody _rigidBodyComponent;
