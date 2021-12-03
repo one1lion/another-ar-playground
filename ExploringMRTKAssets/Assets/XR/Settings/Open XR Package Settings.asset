@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f34c86d1a130cc45a438373e1e8a4fc, type: 3}
   m_Name: PlayModeRemotingPlugin Standalone
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Holographic Remoting for Play Mode
   version: 1.1.1
   featureIdInternal: com.microsoft.openxr.feature.playmoderemoting
@@ -473,7 +473,6 @@ MonoBehaviour:
   - {fileID: -1622146363819257244}
   - {fileID: -812373783618409012}
   - {fileID: -2295925466085859518}
-  - {fileID: 6710314278700906049}
   - {fileID: -8882504197124820522}
   - {fileID: 2090312148455619346}
   - {fileID: 5253192939942958043}
@@ -868,6 +867,7 @@ MonoBehaviour:
   m_Name: MockDriver Standalone
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Mock Driver
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.mockdriver
