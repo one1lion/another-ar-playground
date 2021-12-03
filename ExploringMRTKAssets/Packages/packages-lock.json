@@ -97,10 +97,14 @@
     },
     "com.unity.collab-proxy": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "version": "1.13.5",
 =======
       "version": "1.15.1",
 >>>>>>> parent of f8e217d (Deleted after updating .gitignore)
+=======
+      "version": "1.15.1",
+>>>>>>> parent of 9be9b0f (Merge branch 'main' of https://github.com/one1lion/another-ar-playground)
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -191,10 +195,14 @@
     },
     "com.unity.test-framework": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "version": "1.1.29",
 =======
       "version": "1.1.30",
 >>>>>>> parent of f8e217d (Deleted after updating .gitignore)
+=======
+      "version": "1.1.30",
+>>>>>>> parent of 9be9b0f (Merge branch 'main' of https://github.com/one1lion/another-ar-playground)
       "depth": 0,
       "source": "registry",
       "dependencies": {
