@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BrickBreaker.unity
     guid: 85189e92939bae54ca093c297a64f5c8
+  - enabled: 1
+    path: Assets/Scenes/AzureSpatialAnchors.unity
+    guid: fef73b0ef4dc46342828c32d035471f6
+  - enabled: 0
+    path: Assets/Scenes/AzureSpatialAnchors_Mobile.unity
+    guid: 10d47924f9ad47b4d9f451b8484203f2
+  - enabled: 0
+    path: Assets/Scenes/MSLearn_ObjectManip.unity
+    guid: fcf87054e5a46e64f9cdf9c20ce3f630
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 04739dabe1b31df418e4225a15aaa1aa, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 56ee627df9fe9cc4884d4e2c73711d1e, type: 2}
