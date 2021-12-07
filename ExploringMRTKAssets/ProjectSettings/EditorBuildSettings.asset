@@ -6,19 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
     path: Assets/Scenes/BrickBreaker.unity
     guid: 85189e92939bae54ca093c297a64f5c8
   - enabled: 1
     path: Assets/Scenes/AzureSpatialAnchors.unity
     guid: fef73b0ef4dc46342828c32d035471f6
-  - enabled: 0
-    path: Assets/Scenes/AzureSpatialAnchors_Mobile.unity
-    guid: 10d47924f9ad47b4d9f451b8484203f2
-  - enabled: 0
-    path: Assets/Scenes/MSLearn_ObjectManip.unity
-    guid: fcf87054e5a46e64f9cdf9c20ce3f630
   m_configObjects:
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 04739dabe1b31df418e4225a15aaa1aa, type: 2}
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 56ee627df9fe9cc4884d4e2c73711d1e, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 674687b36b21d644db0a1c9042a78735, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: a7514ce4c578c8f4894936b4ed7a997c, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dd35ce7b1f1a6514bbf94b94eb5f81d3, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 02dac0a19cbaacd4297445f57f7dcd4f, type: 2}
