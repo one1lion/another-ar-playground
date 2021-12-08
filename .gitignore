@@ -36,3 +36,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
+
+# Personal Keys for ASA
+*/Assets/[Rr]esources/[Aa][Ss][Aa]/SpatialAnchorsConfig.json
+*/Assets/[Rr]esources/[Aa][Ss][Aa]/SpatialAnchorsConfig.json.meta

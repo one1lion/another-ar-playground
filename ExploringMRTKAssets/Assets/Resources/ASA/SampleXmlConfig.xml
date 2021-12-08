@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<SpatialAnchorManager>
+	<!-- ApiKey or AAD -->
+	<AuthenticationMode>ApiKey</AuthenticationMode> 
+	
+	<!-- For ApiKey Configuration -->
+	<SpatialAnchorsAccountId>[AccountId]</SpatialAnchorsAccountId>
+	<SpatialAnchorsAccountKey>[AccountKey]</SpatialAnchorsAccountKey>
+	
+	<!-- Required for both -->
+	<SpatialAnchorsAccountDomain>[Domain]</SpatialAnchorsAccountDomain>
+	
+	<!-- For AAD Configuration -->
+	<ClientId>[ClientId]</ClientId>
+	<TenantId>[TenantId]</TenantId>
+</SpatialAnchorManager>

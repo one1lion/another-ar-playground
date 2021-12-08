@@ -1,0 +1,14 @@
+{
+	"AuthenticationMode": "ApiKey", // ApiKey or AAD
+	
+	// For ApiKey Configuration
+	"SpatialAnchorsAccountId": "[AccountId]",
+	"SpatialAnchorsAccountKey": "[AccountKey]",
+	
+	// Required for both
+	"SpatialAnchorsAccountDomain": "[Domain]",
+	
+	// For AAD Configuration
+	"ClientId": "[ClientId]",
+	"TenantId": "[TenantId]"
+}
