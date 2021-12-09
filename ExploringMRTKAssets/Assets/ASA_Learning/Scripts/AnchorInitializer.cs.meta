@@ -4,8 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - configurationFile: {instanceID: 0}
-  - spatialAnchorManager: {instanceID: 0}
+  - configurationFile: {fileID: 4900000, guid: 02e79ec8ba36c4a468b79954f482b794, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

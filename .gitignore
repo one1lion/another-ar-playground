@@ -40,3 +40,5 @@ sysinfo.txt
 # Personal Keys for ASA
 */Assets/[Rr]esources/[Aa][Ss][Aa]/SpatialAnchorsConfig.json
 */Assets/[Rr]esources/[Aa][Ss][Aa]/SpatialAnchorsConfig.json.meta
+ExploringMRTKAssets/Assets/Resources/ASA/SpatialAnchorsConfigJson.json
+ExploringMRTKAssets/Assets/Resources/ASA/SpatialAnchorsConfigJson.json.meta
